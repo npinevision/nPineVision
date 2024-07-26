@@ -72,25 +72,23 @@ button.main-button:hover {
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Center content */
     align-items: flex-start;
-    gap: 20px;
+    gap: 20px; /* Space between items */
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid red; /* Debugging border */
 }
 
 .portfolio-item {
-    flex: 1 1 calc(50% - 40px); /* Two columns layout */
+    flex: 1 1 100%; /* Full width layout */
     max-width: 600px; /* Ensure a maximum width */
     box-sizing: border-box;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid blue; /* Debugging border */
 }
 
 .portfolio-item .video-wrapper {
@@ -116,10 +114,4 @@ button.main-button:hover {
     text-align: left;
     width: 100%;
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    .portfolio-item {
-        flex: 1 1 100%; /* Full width for smaller screens */
-    }
 }
