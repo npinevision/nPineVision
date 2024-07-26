@@ -71,7 +71,6 @@ button.main-button:hover {
 
 .portfolio {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
@@ -79,10 +78,11 @@ button.main-button:hover {
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
+    border: 1px solid red; /* Debugging border */
 }
 
 .portfolio-item {
-    flex: 1 1 calc(50% - 40px); /* Adjust width for two columns layout */
+    flex: 1 1 calc(50% - 40px); /* Two columns layout */
     max-width: 600px; /* Ensure a maximum width */
     box-sizing: border-box;
     margin: 10px;
@@ -90,6 +90,7 @@ button.main-button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid blue; /* Debugging border */
 }
 
 .portfolio-item .video-wrapper {
