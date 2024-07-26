@@ -76,22 +76,38 @@ button.main-button:hover {
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center; /* Center content */
+    gap: 20px; /* Space between items */
     width: 100%;
-    padding: 0 20px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
 .portfolio-item {
-    margin: 10px;
-    width: calc(50% - 20px); /* Adjust for two columns layout */
+    flex: 1 1 calc(50% - 40px); /* Adjust width for two columns layout */
+    max-width: 600px; /* Ensure a maximum width */
     box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
 }
 
 .portfolio-item .video-wrapper {
     width: 100%;
     border-radius: 5px;
     max-width: 100%; /* Ensure videos don't exceed container width */
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.portfolio-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .portfolio-item p {
@@ -101,22 +117,6 @@ button.main-button:hover {
 
 @media (max-width: 768px) {
     .portfolio-item {
-        width: 100%; /* Full width for smaller screens */
+        flex: 1 1 100%; /* Full width for smaller screens */
     }
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
