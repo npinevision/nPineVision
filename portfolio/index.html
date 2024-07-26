@@ -11,18 +11,20 @@
     <div class="container fade-in">
         <h1>Portfolio</h1>
         <div class="portfolio">
-            <!-- Kaltura Video Embed -->
             <div class="portfolio-item fade-in-scroll">
-                <iframe id="kaltura_player" type="text/javascript" src='https://cdnapisec.kaltura.com/p/1128062/embedPlaykitJs/uiconf_id/51416912?iframeembed=true&entry_id=1_p3zs0zhr&config[provider]={"widgetId":"1_64kewemn"}&config[playback]={"startTime":0}' style="width: 100%;height: 360px;border: 0;" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow...
-                <p class="description">Community Perspectives On Artificial Intelligence</p>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <p class="description">Description for the video</p>
             </div>
-            <!-- YouTube Video with Lite Embed -->
-            <div class="portfolio-item fade-in-scroll youtube-lite" data-id="PpWARlaQ8bA">
-                <img src="../assets/yt-thumbnail.jpg" alt="YouTube Video" class="youtube-thumbnail" loading="lazy">
-                <div class="play-button"></div>
-                <p class="description">YouTube Video Description</p>
+            <div class="portfolio-item fade-in-scroll">
+                <div class="video-wrapper">
+                    <iframe src="https://cdnapisec.kaltura.com/p/1128062/embedPlaykitJs/uiconf_id/51416912?iframeembed=true&entry_id=1_p3zs0zhr" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <p class="description">Description for the video</p>
             </div>
         </div>
+
         <button class="main-button" onclick="navigateTo('../index.html')">Return</button>
     </div>
     <script src="../script.js" defer></script>
